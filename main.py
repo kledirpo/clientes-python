@@ -1,3 +1,4 @@
-import controllers.validacao as controller
+import controllers.controllerAplicacao as controllerAplicacao
 
-controller.iniciar()
+#Inicia a aplicação chamando a função iniciar dentro do arquivo Controller
+controllerAplicacao.iniciar()
