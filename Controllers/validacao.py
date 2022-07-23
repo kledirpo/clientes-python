@@ -1,9 +1,15 @@
-# Controller - A Validação entre o View e o Model.
-import Models.banco as banco
-def validar_login(usuario,senha):
-   usuario_DB = banco.model_usuario() 
-   senha_DB = banco.model_senha()
-   if usuario == usuario_DB and senha == senha_DB:
-        print("Pode Acessar")
-   else:
-        print("Usuario ou Senha inválido!")
+import models.banco as banco
+import views.formulario as view
+
+
+# Controller - a validação
+def validar_login(usuario_digitado, senha_digitado):
+    usuario_BD = banco.model_usuario()
+    senha_BD = banco.model_senha()
+    if usuario_digitado == usuario_BD and senha_digitado == senha_BD:
+        print("pode entrar")
+    else:
+        print("usuário ou senha inválido")
+
+def iniciar():
+    view.formulario_login()
